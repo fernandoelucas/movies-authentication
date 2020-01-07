@@ -1,0 +1,21 @@
+version: "3"
+services:
+  movies-authentication:
+    image: movies-authentication
+    ports:
+      - "8080:8080"
+    networks:
+      - movies-authentication-mysql
+    depends_on:
+      - mysqldb
+ 
+  mysqldb:
+    image: mysql:8
+    networks:
+      - movies-authentication-mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=users  
+
+networks:
+  movies-authentication-mysql: 
