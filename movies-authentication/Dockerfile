@@ -6,7 +6,7 @@
 FROM openjdk:8-jdk-alpine as build
 
 # Set the current working directory inside the image
-WORKDIR /app
+WORKDIR /movies-authentication
 
 # Copy maven executable to the image
 COPY mvnw .
