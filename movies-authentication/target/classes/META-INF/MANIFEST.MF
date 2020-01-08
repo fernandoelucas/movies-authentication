@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Implementation-Title: movies-authentication
 Implementation-Version: 0.0.1-SNAPSHOT
-Built-By: lucas
+Built-By: fernandolucas
 Implementation-Vendor-Id: com.movies.authentication
-Build-Jdk: 1.8.0_151
+Build-Jdk: 1.8.0_231
 Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
  ot-starter-parent/movies-authentication
 Created-By: Maven Integration for Eclipse
