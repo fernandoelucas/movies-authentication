@@ -18,13 +18,14 @@ COPY pom.xml .
 # Build all the dependencies in preparation to go offline. 
 # This is a separate step so the dependencies will be cached unless 
 # the pom.xml file has changed.
+RUN chmod -R 777 mvnw
 RUN ./mvnw dependency:go-offline -B
 
 # Copy the project source
 COPY src src
 
 # Package the application
-RUN chmod -R 777 mvnw
+
 RUN ./mvnw package -DskipTests
 RUN mkdir -p target/dependency && (cd target/dependency; jar -xf ../*.jar)
 
