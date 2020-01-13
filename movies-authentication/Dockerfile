@@ -9,8 +9,6 @@ FROM openjdk:8-jdk-alpine as build
 WORKDIR /movies-authentication
 
 # Copy maven executable to the image
-RUN ls
-RUN pwd
 COPY mvnw . 
 COPY .mvn .mvn 
 
